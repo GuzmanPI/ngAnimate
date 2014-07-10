@@ -36,7 +36,7 @@ function AppController ($scope, $rootScope, $http, $timeout) {
 
 	// grid(0), list (1)
 	$scope.layoutMode = 0;
-	$scope.list = [];
+	
 	$scope.currentAnimation;
 	$scope.isShow = true;
 	$scope.animations = ["toggle", 
@@ -56,6 +56,7 @@ function AppController ($scope, $rootScope, $http, $timeout) {
 						"rotate-in"];
 
 	$scope.addItem = function (animation) {
+		$scope.list = [];
 		$scope.animation = animation;
 		for (var i = 0; i < 6; i++) {
 			$timeout(function () {
